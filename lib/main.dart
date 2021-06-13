@@ -4,6 +4,20 @@ void main() => runApp(
       BallPage()
     );
 
+class Ball extends StatefulWidget {
+  // const Ball({Key? key}) : super(key: key);
+
+  @override
+  _BallState createState() => _BallState();
+}
+
+class _BallState extends State<Ball> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: Image.asset('images/ball1.png'));
+  }
+}
+
 class BallPage extends StatelessWidget {
   // const BallPage({Key? key}) : super(key: key);
 
@@ -16,7 +30,7 @@ class BallPage extends StatelessWidget {
           title: Text('Ask Me Anything'),
           backgroundColor: Colors.blue[900],
         ),
-        body: Container(),
+        body: Ball(),
       )
     );
   }
